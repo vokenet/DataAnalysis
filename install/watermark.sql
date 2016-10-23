@@ -9,6 +9,19 @@
 SET sql_mode = '';
 
 --
+-- Table structure for table `wm_region`
+--
+CREATE TABLE IF NOT EXISTS `wm_region`(
+    `region_id` int(11) NOT NULL AUTO_INCREMENT,
+    `region_nm` varchar(128) NOT NULL,
+    `region_dn` varchar(400) NULL,
+    `active_fg` tinyint(1) NOT NULL DEFAULT '1',
+    `create_dt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `update_dt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT pk_region PRIMARY KEY (region_id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
 -- Table structure for table `wm_country`
 --
 
